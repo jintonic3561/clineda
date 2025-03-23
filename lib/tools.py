@@ -4,10 +4,6 @@ import os
 import pandas as pd
 
 
-def print_json(df: pd.DataFrame):
-    print(df.to_json())
-
-
 def load_data(dirctory="/work/data/input/"):
     files = glob.glob(os.path.join(dirctory, "*.csv")) + glob.glob(os.path.join(dirctory, "*.parquet"))
     assert len(files) > 0, "No files found in the input directory"
@@ -19,7 +15,3 @@ def load_data(dirctory="/work/data/input/"):
         df = pd.read_parquet(file_name)
 
     return df
-
-
-def get_stats(df: pd.DataFrame):
-    return df.describe()

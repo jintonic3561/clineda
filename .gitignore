@@ -5,3 +5,4 @@ lib/__pycache__/
 .temp/
 data/input/*.csv
 data/input/*.parquet
+report/*.md
